@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Teste interativo de Português, 6.º ano. 50 questões sobre três contos e gramática, com correção automática e atividades de escrita.">
+<title>Desafio de Português — 50 questões | 6.º ano</title>
+<style>
+:root{--navy:#142942;--deep:#0d2237;--sky:#eaf3f3;--mint:#0e7e79;--mint2:#d8f0eb;--bg:#f4f7f7;--card:#fff;--muted:#5b6f7d;--border:#dce6e8;--orange:#a65d20;--orangeBg:#fff4e6;--red:#a63035;--redBg:#fff0ef;--green:#206d51;--greenBg:#eaf8ef;--shadow:0 13px 38px rgba(19,43,61,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--navy);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(145deg,#ebf5f3 0%,#f5f7f6 28%,#f9f9f5 100%);min-height:100vh;font-size:16px}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}.shell{max-width:1190px;margin:0 auto;padding:24px 20px 60px}.topbar{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:0 0 24px}.brand{display:flex;align-items:center;gap:12px;color:var(--deep);text-decoration:none;font-weight:850;letter-spacing:-.5px}.brand-logo{width:46px;height:46px;border-radius:14px;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:700;font-size:23px}.mini-label{font-weight:750;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mint)}.top-note{font-size:13px;color:var(--muted)}.hero{border:1px solid #cddedb;border-radius:24px;background:radial-gradient(ellipse at 84% -30%,#c8e5df 0,transparent 50%),linear-gradient(120deg,#fff 0%,#ecf5f1 100%);padding:28px 32px;display:flex;justify-content:space-between;gap:32px;align-items:center;box-shadow:var(--shadow);margin-bottom:18px}.hero h1{font-family:Georgia,'Times New Roman',serif;letter-spacing:-1.2px;line-height:1.08;font-size:clamp(30px,3.4vw,46px);font-weight:700;margin:8px 0 12px}.hero p{color:var(--muted);line-height:1.5;margin:0;max-width:600px}.hero-number{font-family:Georgia,serif;font-size:76px;line-height:1;color:var(--mint);white-space:nowrap}.hero-number small{display:block;font-family:inherit;text-align:center;font-size:17px;margin-top:5px;color:var(--navy)}.columns{display:grid;grid-template-columns:276px minmax(0,1fr);gap:20px;align-items:start}.sidebar{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow);position:sticky;top:18px}.sidebar h2{font-size:15px;margin:0 0 12px}.name-label{font-size:12px;font-weight:800;color:var(--muted);display:block;margin:0 0 7px}.student-name{width:100%;padding:12px 11px;border:1px solid var(--border);border-radius:9px;outline-color:var(--mint);background:#f9fbfb}.progress-header{display:flex;justify-content:space-between;align-items:center;margin:20px 0 9px;font-size:13px;color:var(--muted)}.progress-header strong{color:var(--deep)}.progress-track{height:9px;background:#e5eded;border-radius:20px;overflow:hidden}.progress-fill{height:100%;width:0;background:var(--mint);border-radius:20px;transition:width .25s}.chapter-list{margin-top:18px;display:grid;gap:5px}.chapter{padding:11px 10px;border-radius:11px;background:transparent;border:1px solid transparent;color:var(--navy);text-align:left;display:flex;align-items:center;justify-content:space-between;gap:10px}.chapter:hover{background:#f4f8f8}.chapter.active{background:var(--sky);border-color:#cde3df}.chapter-name{font-size:13px;font-weight:700;line-height:1.35}.chapter-num{display:block;color:var(--mint);font-size:10px;letter-spacing:1px;margin-bottom:3px;font-weight:850}.chip{border-radius:20px;padding:5px 7px;min-width:40px;background:#f0f3f4;font-weight:750;font-size:11px;text-align:center;color:var(--muted)}.sidebar-help{margin:18px 0 0;padding-top:17px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;line-height:1.6}.main{min-width:0}.reading-panel{background:#fff;border:1px solid var(--border);border-radius:15px;margin-bottom:14px;box-shadow:var(--shadow);overflow:hidden}.reading-panel summary{cursor:pointer;list-style:none;padding:16px 21px;color:var(--mint);font-size:14px;font-weight:800}.reading-panel summary::-webkit-details-marker{display:none}.reading-panel summary:after{content:" +";float:right}.reading-panel[open] summary:after{content:" −"}.reading-body{padding:0 21px 16px;color:#3b5260;line-height:1.75;font-size:15px}.reading-body p{margin:10px 0}.reading-body em{font-size:12px;color:var(--muted)}.white{border:1px solid var(--border);background:#fff;border-radius:19px;padding:29px 32px;box-shadow:var(--shadow)}.qtop{display:flex;justify-content:space-between;align-items:center;gap:10px}.qcount{font-size:12px;color:var(--mint);font-weight:850;letter-spacing:1.5px;text-transform:uppercase}.qtype{font-size:12px;border-radius:16px;padding:7px 10px;background:#eef3f5;color:#4a6573;font-weight:650}.question-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(21px,2.25vw,28px);line-height:1.36;letter-spacing:-.3px;margin:23px 0 23px;color:var(--deep)}.choices{display:grid;gap:10px}.choice{border:1.5px solid var(--border);border-radius:13px;display:flex;align-items:center;gap:14px;padding:15px 16px;cursor:pointer;line-height:1.43;background:#fff;transition:background .2s,border .2s}.choice:hover{background:#f7fbfb;border-color:#99c9c0}.choice.selected{background:#edf8f5;border-color:var(--mint)}.choice input{width:18px;height:18px;accent-color:var(--mint);flex-shrink:0}.choice-index{font-weight:750;color:#53717b;width:18px;flex-shrink:0}.choice-text{flex:1}.answer-input,.answer-textarea,.match-select{border:1.5px solid #cbdcde;border-radius:11px;background:#fbfcfc;outline-color:var(--mint);color:var(--navy)}.answer-input{padding:15px 18px;width:100%;font-size:17px}.answer-textarea{padding:15px 16px;width:100%;min-height:174px;resize:vertical;line-height:1.6}.field-note,.muted-note{color:var(--muted);font-size:13px;margin-top:11px;line-height:1.55}.pair-list{display:grid;gap:12px}.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,.95fr);align-items:center;gap:14px;padding:12px 13px;border-radius:11px;border:1px solid var(--border);background:#fbfcfc}.pair-text{line-height:1.45;font-size:14px;font-weight:650}.match-select{padding:11px 12px;width:100%;font-size:14px}.hint-box{margin:26px 0 0}.hint-button{border:0;background:none;color:var(--mint);font-size:14px;font-weight:750;padding:0}.hint-content{margin-top:9px;background:var(--orangeBg);color:#7a4c28;border-left:3px solid #db9e53;padding:12px 15px;border-radius:0 8px 8px 0;line-height:1.5;font-size:14px}.footnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px}.btn{padding:12px 18px;border-radius:11px;border:1px solid #d3e1e1;font-weight:800;background:#fff;color:var(--navy);font-size:14px;transition:transform .1s,background .15s;text-align:center}.btn:hover:not(:disabled){background:#f1f8f7}.btn:active{transform:translateY(1px)}.btn.primary{background:var(--mint);color:#fff;border-color:var(--mint)}.btn.primary:hover{background:#086f6a}.btn.dark{background:var(--deep);color:#fff;border-color:var(--deep)}.btn.light-danger{color:#903b37;border-color:#efd4d2}.nav-left,.nav-right{display:flex;gap:9px;flex-wrap:wrap}.question-dots{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;margin:18px 0}.dot{border:1px solid #d1dddf;background:white;border-radius:8px;min-width:0;height:37px;color:var(--muted);font-weight:700;font-size:12px}.dot:hover{background:#eef6f5}.dot.current{border:2px solid var(--mint);background:#eff7f5;color:var(--deep)}.dot.answered{background:#dbeee9;border-color:#c3dfd7;color:#246d5f}.dot.current.answered{border:2px solid var(--mint)}.summary-intro{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.6}.small-stat{background:var(--bg);padding:9px 12px;border-radius:10px;font-size:13px}.result-hero{border-radius:17px;padding:24px 26px;background:linear-gradient(115deg,#e7f5f0,#f7fbf9);border:1px solid #cee9df}.result-hero h2{margin:0 0 7px;font-family:Georgia,serif;font-size:27px}.result-hero p{margin:4px 0;color:#4d6470;line-height:1.55}.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:19px 0}.metric{padding:15px;border-radius:13px;background:#fff;border:1px solid var(--border)}.metric strong{font-size:27px;display:block;color:var(--mint);letter-spacing:-1px}.metric small{font-size:12px;color:var(--muted);line-height:1.4;display:block;margin-top:3px}.result-actions{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 23px}.result-panel h3{margin:25px 0 12px}.chapter-review{border:1px solid var(--border);border-radius:13px;margin:10px 0;overflow:hidden;background:#fff}.chapter-review summary{padding:15px 18px;font-weight:800;cursor:pointer;background:#f9fbfb}.review-list{padding:0 18px 12px}.review-item{border-top:1px solid var(--border);padding:16px 0}.review-title{font-size:14px;font-weight:800;line-height:1.5;margin-bottom:8px}.status{display:inline-block;font-size:11px;font-weight:850;margin-right:8px;padding:5px 8px;border-radius:8px}.status.ok{color:var(--green);background:var(--greenBg)}.status.bad{color:var(--red);background:var(--redBg)}.status.manual{color:var(--orange);background:var(--orangeBg)}.answer-line{font-size:13px;line-height:1.6;white-space:pre-line;margin:5px 0;color:#344d5e}.answer-line strong{color:var(--deep)}.explain{font-size:13px;color:var(--muted);line-height:1.6;margin-top:5px}.manual-buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.manual-buttons button{border:1px solid var(--border);padding:8px 12px;background:#fff;color:var(--navy);border-radius:8px;font-size:12px;font-weight:750}.manual-buttons button.active-good{background:#e2f6eb;color:#176d4c;border-color:#76b99c}.manual-buttons button.active-bad{background:#fff0e8;color:#994927;border-color:#d3a48a}.notice{background:#fff9e9;border:1px solid #edddad;border-radius:11px;padding:15px;color:#775c30;font-size:13px;line-height:1.6}.hidden{display:none!important}.footer{margin:26px 0 0;font-size:12px;color:#789096;text-align:center}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:850px){.columns{grid-template-columns:1fr}.sidebar{position:static}.chapter-list{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-number{font-size:62px}.white{padding:24px}}
+@media(max-width:520px){.shell{padding:13px 12px 48px}.topbar{margin-bottom:14px}.hero{border-radius:17px;padding:21px 19px;align-items:flex-start}.hero h1{font-size:29px}.hero-number{font-size:47px}.hero-number small{font-size:12px}.hero p{font-size:13px}.sidebar{padding:16px}.chapter-list{grid-template-columns:1fr 1fr}.chapter{padding:9px 7px}.chapter-name{font-size:12px}.chip{padding:4px 6px}.white{padding:23px 18px}.question-title{margin-top:19px;font-size:22px}.choice{padding:13px 11px;gap:9px;font-size:14px}.pair{grid-template-columns:1fr;gap:8px}.footnav{align-items:stretch;flex-wrap:wrap}.nav-left,.nav-right{flex:1}.nav-right{justify-content:flex-end}.btn{padding:11px 13px;font-size:13px}.numbers{gap:7px}.metric{padding:10px}.metric strong{font-size:21px}.result-hero{padding:20px}.review-list{padding:0 11px 11px}.top-note{display:none}}
+@media print{body{background:#fff}.topbar,.hero,.sidebar,.footnav,.result-actions,.manual-buttons,.footer,.question-dots{display:none!important}.shell{max-width:none;padding:0}.columns{display:block}.main{width:100%}.white{border:0;box-shadow:none;padding:0}.chapter-review{break-inside:avoid}.chapter-review:not([open]) .review-list{display:block!important}.result-panel{display:block!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar"><div class="brand"><div class="brand-logo">P.</div><div>PORTUGUÊS <span style="color:#0e7e79">/</span> 6.º ANO<div style="font-size:11px;color:#6b8490;font-weight:600;letter-spacing:.5px;margin-top:4px">FICHA INTERATIVA · PT-PT</div></div></div><div class="top-note">50 questões · 5 partes · 1 ponto por questão</div></header>
+<section class="hero"><div><div class="mini-label">Leitura · Gramática · Escrita</div><h1>Desafio de Português</h1><p>Três contos tradicionais, determinantes e pronomes indefinidos e modo conjuntivo. Responde ao teu ritmo e revê as soluções no final.</p></div><div class="hero-number" aria-hidden="true">50<small>questões</small></div></section>
+<div class="columns">
+<aside class="sidebar"><label for="studentName" class="name-label">NOME DO ALUNO / DA ALUNA</label><input id="studentName" class="student-name" type="text" maxlength="80" autocomplete="name" placeholder="Escreve o teu nome"><div class="progress-header"><span>Progresso</span><strong id="progressText">0 de 50</strong></div><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div><div id="chapters" class="chapter-list" aria-label="Partes da ficha"></div><div class="sidebar-help">As tuas respostas ficam guardadas neste navegador, sempre que possível. A correção aparece depois de terminares a ficha. As 5 respostas de escrita precisam de revisão.</div></aside>
+<main class="main"><div id="quizScreen"><div id="readingArea"></div><div class="white"><div class="qtop"><div class="qcount" id="qcount">Questão 1 de 50</div><div class="qtype" id="qtype">Escolha múltipla</div></div><h2 class="question-title" id="questionTitle"></h2><div id="answerArea"></div><div class="hint-box"><button class="hint-button" type="button" id="hintBtn" aria-expanded="false">+ Mostrar uma dica</button><div id="hintContent" class="hint-content hidden"></div></div></div><div class="footnav"><div class="nav-left"><button class="btn" id="previousBtn" type="button">Anterior</button></div><div class="nav-right"><button class="btn" id="nextBtn" type="button">Seguinte</button><button class="btn dark" id="finishBtn" type="button">Terminar e corrigir</button></div></div><div class="question-dots" id="questionDots" aria-label="Ir para uma questão da parte atual"></div><p class="summary-intro" style="text-align:center">Podes voltar atrás para alterar as respostas antes de terminares.</p></div><div class="result-panel hidden" id="resultScreen"></div></main>
+</div><footer class="footer">Ficha de treino original inspirada nos materiais escolares fornecidos · Não é uma prova oficial · Funciona sem conta e sem ligação permanente à Internet</footer>
+</div>
+<script>
+'use strict';
+const questions=[
+  {
+    "id": 1,
+    "sec": 1,
+    "kind": "single",
+    "question": "Quem são as personagens apresentadas na situação inicial de «Os três irmãos»?",
+    "options": [
+      "Um pai e os seus três filhos",
+      "Um rei e os seus três filhos",
+      "Três irmãos e um lenhador",
+      "Um pai e os seus dois filhos"
+    ],
+    "correct": 0,
+    "explain": "No início, um pai pede aos seus três filhos que aprendam um ofício.",
+    "hint": "Recorda quem propôs o desafio."
+  },
+  {
+    "id": 2,
+    "sec": 1,
+    "kind": "single",
+    "question": "Qual foi o ofício aprendido pelo primeiro filho?",
+    "options": [
+      "Carpinteiro",
+      "Ferreiro",
+      "Barbeiro",
+      "Mestre de esgrima"
+    ],
+    "correct": 1,
+    "explain": "O primeiro filho aprendeu a ser ferreiro.",
+    "hint": "Pensa num ofício ligado ao trabalho com metal."
+  },
+  {
+    "id": 3,
+    "sec": 1,
+    "kind": "single",
+    "question": "O segundo filho decidiu tornar-se…",
+    "options": [
+      "Barbeiro",
+      "Sapateiro",
+      "Ferreiro",
+      "Comerciante"
+    ],
+    "correct": 0,
+    "explain": "O segundo filho aprendeu o ofício de barbeiro.",
+    "hint": "Lembra-te da prova que fez com uma lebre."
+  },
+  {
+    "id": 4,
+    "sec": 1,
+    "kind": "single",
+    "question": "O terceiro filho tornou-se mestre de…",
+    "options": [
+      "Pintura",
+      "Música",
+      "Esgrima",
+      "Equitação"
+    ],
+    "correct": 2,
+    "explain": "O terceiro filho tornou-se mestre de esgrima.",
+    "hint": "Na sua demonstração, utilizou uma espada."
+  },
+  {
+    "id": 5,
+    "sec": 1,
+    "kind": "single",
+    "question": "Segundo o acordo feito pelo pai, quem ficaria com a casa?",
+    "options": [
+      "O filho mais velho",
+      "O filho com mais dinheiro",
+      "O filho que regressasse primeiro",
+      "O filho que apresentasse a melhor obra-prima"
+    ],
+    "correct": 3,
+    "explain": "A casa seria entregue ao filho que apresentasse a melhor obra-prima do seu ofício.",
+    "hint": "O pai queria comparar o que cada um aprendera."
+  },
+  {
+    "id": 6,
+    "sec": 1,
+    "kind": "fill",
+    "question": "Completa: «Um dos filhos barbeou uma ______.»",
+    "accepted": [
+      "lebre"
+    ],
+    "explain": "O barbeiro demonstrou a sua habilidade barbeando uma lebre.",
+    "hint": "Recorda o animal utilizado para demonstrar a habilidade do barbeiro."
+  },
+  {
+    "id": 7,
+    "sec": 1,
+    "kind": "single",
+    "question": "Que proeza realizou o irmão que aprendera a ser ferreiro?",
+    "options": [
+      "Barbeou uma lebre sem a magoar",
+      "Colocou quatro ferraduras num cavalo a galope",
+      "Protegeu-se da chuva usando uma espada",
+      "Encontrou uma espada escondida"
+    ],
+    "correct": 1,
+    "explain": "O ferreiro conseguiu ferrar um cavalo a galope, demonstrando destreza.",
+    "hint": "Relaciona a profissão com o animal da prova."
+  },
+  {
+    "id": 8,
+    "sec": 1,
+    "kind": "single",
+    "question": "Como demonstrou o mais novo a sua habilidade?",
+    "options": [
+      "Fez uma ferradura de prata",
+      "Cortou o pelo de uma lebre",
+      "Movimentou a espada de modo a não se molhar com a chuva",
+      "Saltou do cavalo para evitar a chuva"
+    ],
+    "correct": 2,
+    "explain": "O mestre de esgrima impediu que a chuva o molhasse graças aos movimentos da espada.",
+    "hint": "A demonstração ocorreu quando chovia."
+  },
+  {
+    "id": 9,
+    "sec": 1,
+    "kind": "match",
+    "question": "Associa cada momento da narrativa ao acontecimento correspondente.",
+    "pairs": [
+      [
+        "Situação inicial",
+        "O pai apresenta um desafio aos filhos."
+      ],
+      [
+        "Desenvolvimento",
+        "Os irmãos aprendem ofícios e demonstram as suas habilidades."
+      ],
+      [
+        "Conclusão",
+        "Os irmãos ficam a viver juntos."
+      ]
+    ],
+    "choices": [
+      "O pai apresenta um desafio aos filhos.",
+      "Os irmãos aprendem ofícios e demonstram as suas habilidades.",
+      "Os irmãos ficam a viver juntos."
+    ],
+    "explain": "A narrativa organiza-se em situação inicial, desenvolvimento e conclusão.",
+    "hint": "Pensa na sequência começo → acontecimentos → desfecho."
+  },
+  {
+    "id": 10,
+    "sec": 1,
+    "kind": "writing",
+    "question": "Explica, em duas frases, por que razão a casa foi atribuída ao filho mais novo e o que aconteceu depois aos três irmãos.",
+    "model": "O filho mais novo apresentou a melhor obra-prima, pois mostrou grande habilidade com a espada. Depois, os três irmãos decidiram viver juntos na casa.",
+    "rubric": "Menciona a prova do irmão mais novo e o destino final dos irmãos.",
+    "hint": "Usa informação do texto e escreve frases completas."
+  },
+  {
+    "id": 11,
+    "sec": 2,
+    "kind": "single",
+    "question": "Por que razão os irmãos mais velhos não levavam o Tolo a sério?",
+    "options": [
+      "Porque era o mais novo e o julgavam ingénuo",
+      "Porque nunca quis viajar",
+      "Porque tinha medo de todos os animais",
+      "Porque já tinha sido rei"
+    ],
+    "correct": 0,
+    "explain": "Os irmãos consideravam o Tolo ingénuo e pensavam que ele não saberia orientar-se.",
+    "hint": "O texto contrasta a esperteza dos mais velhos com a atitude do mais novo."
+  },
+  {
+    "id": 12,
+    "sec": 2,
+    "kind": "multi",
+    "question": "Seleciona TODOS os animais que o Tolo protegeu ao longo da viagem.",
+    "options": [
+      "Formigas",
+      "Patos",
+      "Abelhas",
+      "Cavalos"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explain": "O Tolo impediu que os irmãos prejudicassem formigas, patos e abelhas; os cavalos não fazem parte destas três situações.",
+    "hint": "Recorda os três encontros antes da chegada ao castelo."
+  },
+  {
+    "id": 13,
+    "sec": 2,
+    "kind": "tf",
+    "question": "O Tolo deixou os irmãos destruir o formigueiro para verem as formigas fugir.",
+    "correct": false,
+    "explain": "O Tolo proibiu os irmãos de perturbarem as formigas e os seus ovos.",
+    "hint": "Compara a intenção dos irmãos com a reação do Tolo."
+  },
+  {
+    "id": 14,
+    "sec": 2,
+    "kind": "single",
+    "question": "Qual era a primeira tarefa necessária para libertar o castelo do encantamento?",
+    "options": [
+      "Encontrar mil pérolas debaixo do musgo",
+      "Abrir três portas de ferro",
+      "Recuperar uma espada do lago",
+      "Identificar a princesa mais velha"
+    ],
+    "correct": 0,
+    "explain": "A primeira tarefa consistia em encontrar mil pérolas sob o musgo antes do pôr do sol.",
+    "hint": "A prova envolvia pequenos objetos espalhados pela floresta."
+  },
+  {
+    "id": 15,
+    "sec": 2,
+    "kind": "single",
+    "question": "Quem ajudou o Tolo a cumprir a primeira tarefa?",
+    "options": [
+      "A rainha das abelhas",
+      "O rei das formigas e outras formigas",
+      "Os dois irmãos mais velhos",
+      "O homenzinho cinzento"
+    ],
+    "correct": 1,
+    "explain": "O rei das formigas, a quem o Tolo tinha poupado a vida, trouxe outras formigas para encontrar as pérolas.",
+    "hint": "Pensa nos animais mais adequados a procurar coisas pequenas."
+  },
+  {
+    "id": 16,
+    "sec": 2,
+    "kind": "single",
+    "question": "Na segunda tarefa, o Tolo precisava de recuperar…",
+    "options": [
+      "Uma coroa escondida na floresta",
+      "Um saco de moedas",
+      "A chave do quarto da filha do rei, no fundo do lago",
+      "Um colar junto do formigueiro"
+    ],
+    "correct": 2,
+    "explain": "A segunda tarefa era apanhar a chave do quarto da filha do rei no fundo do lago.",
+    "hint": "A solução exigia procurar algo dentro de água."
+  },
+  {
+    "id": 17,
+    "sec": 2,
+    "kind": "single",
+    "question": "Quem recuperou a chave do fundo do lago?",
+    "options": [
+      "Os patos",
+      "As formigas",
+      "As abelhas",
+      "Os irmãos"
+    ],
+    "correct": 0,
+    "explain": "Os patos que o Tolo tinha protegido mergulharam e trouxeram a chave.",
+    "hint": "Recorda os animais que sabem nadar."
+  },
+  {
+    "id": 18,
+    "sec": 2,
+    "kind": "single",
+    "question": "Quem ajudou o Tolo a identificar a princesa mais nova?",
+    "options": [
+      "O rei das formigas",
+      "Os patos",
+      "A rainha das abelhas",
+      "O homenzinho cinzento"
+    ],
+    "correct": 2,
+    "explain": "A rainha das abelhas reconheceu a princesa que comera mel.",
+    "hint": "A última prova estava ligada a um alimento doce."
+  },
+  {
+    "id": 19,
+    "sec": 2,
+    "kind": "match",
+    "question": "Associa cada princesa ao doce que tinha comido antes de adormecer.",
+    "pairs": [
+      [
+        "Princesa mais velha",
+        "Torrão de açúcar"
+      ],
+      [
+        "Segunda princesa",
+        "Xarope"
+      ],
+      [
+        "Princesa mais nova",
+        "Mel"
+      ]
+    ],
+    "choices": [
+      "Mel",
+      "Torrão de açúcar",
+      "Xarope"
+    ],
+    "explain": "A mais velha comera açúcar, a segunda xarope e a mais nova mel.",
+    "hint": "Consulta a descrição da terceira tarefa."
+  },
+  {
+    "id": 20,
+    "sec": 2,
+    "kind": "writing",
+    "question": "Que lição transmite «A rainha das abelhas»? Explica-a em duas ou três frases e dá um exemplo da história.",
+    "model": "O conto mostra que devemos respeitar e proteger os animais e ajudar os outros. O Tolo salvou as abelhas e, mais tarde, elas ajudaram-no a reconhecer a princesa certa.",
+    "rubric": "Apresenta uma lição e um episódio concreto que a demonstre.",
+    "hint": "Relaciona as boas ações iniciais com o auxílio recebido depois."
+  },
+  {
+    "id": 21,
+    "sec": 3,
+    "kind": "single",
+    "question": "Que sinal chamou a atenção de Ali Babá quando trabalhava?",
+    "options": [
+      "O brilho de uma moeda",
+      "Uma nuvem de poeira levantada por cavaleiros",
+      "O som de um sino na aldeia",
+      "Uma porta aberta na montanha"
+    ],
+    "correct": 1,
+    "explain": "Ali Babá reparou numa nuvem de poeira que anunciava a chegada de uma coluna de cavaleiros.",
+    "hint": "Lembra-te do primeiro parágrafo do texto."
+  },
+  {
+    "id": 22,
+    "sec": 3,
+    "kind": "fill",
+    "question": "Quantos ladrões contou Ali Babá, incluindo o chefe?",
+    "accepted": [
+      "40",
+      "quarenta"
+    ],
+    "explain": "Ali Babá contou quarenta homens, incluindo o chefe.",
+    "hint": "A quantidade é apresentada explicitamente na narrativa."
+  },
+  {
+    "id": 23,
+    "sec": 3,
+    "kind": "single",
+    "question": "Onde se escondeu Ali Babá quando viu aproximar-se o grupo?",
+    "options": [
+      "Dentro da caverna",
+      "Atrás de um muro",
+      "No alto de um cipreste",
+      "Debaixo de uma pedra"
+    ],
+    "correct": 2,
+    "explain": "Ali Babá subiu a um cipreste muito frondoso para observar sem ser visto.",
+    "hint": "Procura o local de onde podia ver os cavaleiros."
+  },
+  {
+    "id": 24,
+    "sec": 3,
+    "kind": "single",
+    "question": "Que expressão fez abrir a rocha?",
+    "options": [
+      "Fecha-te, sésamo!",
+      "Abre-te, sésamo!",
+      "Abre-te, tesouro!",
+      "Mostra-te, caverna!"
+    ],
+    "correct": 1,
+    "explain": "A fórmula mágica dita junto da rocha era «Abre-te, sésamo!».",
+    "hint": "É também o título do texto."
+  },
+  {
+    "id": 25,
+    "sec": 3,
+    "kind": "tf",
+    "question": "Ali Babá desceu da árvore antes de todos os ladrões se afastarem.",
+    "correct": false,
+    "explain": "Ali Babá esperou que os quarenta ladrões saíssem e se afastassem antes de descer.",
+    "hint": "Recorda a preocupação de Ali Babá em não ser descoberto."
+  },
+  {
+    "id": 26,
+    "sec": 3,
+    "kind": "single",
+    "question": "Na frase «Como os minutos pareciam longos!», por que razão Ali Babá sentiu o tempo passar devagar?",
+    "options": [
+      "Estava preocupado com a possibilidade de ser descoberto",
+      "Tinha adormecido profundamente",
+      "Não sabia contar os minutos",
+      "Estava a falar com os ladrões"
+    ],
+    "correct": 0,
+    "explain": "O receio de ser visto levou Ali Babá a esperar com ansiedade, fazendo o tempo parecer mais lento.",
+    "hint": "Relaciona a passagem do tempo com o estado emocional da personagem."
+  },
+  {
+    "id": 27,
+    "sec": 3,
+    "kind": "match",
+    "question": "Associa as expressões aos sentimentos de Ali Babá.",
+    "pairs": [
+      [
+        "«Quem serão eles?»",
+        "Curiosidade"
+      ],
+      [
+        "«Recuperar o seu burro e fugir»",
+        "Receio"
+      ],
+      [
+        "«Depois, já tranquilo…»",
+        "Tranquilidade"
+      ],
+      [
+        "«Estava todo entregue ao seu espanto»",
+        "Admiração"
+      ],
+      [
+        "«Abre-te, sésamo!» (ao entrar)",
+        "Determinação"
+      ]
+    ],
+    "choices": [
+      "Curiosidade",
+      "Receio",
+      "Tranquilidade",
+      "Admiração",
+      "Determinação"
+    ],
+    "explain": "A personagem passa da curiosidade ao receio e, depois, à tranquilidade, admiração e determinação.",
+    "hint": "Atenção aos verbos e às expressões que revelam emoções."
+  },
+  {
+    "id": 28,
+    "sec": 3,
+    "kind": "multi",
+    "question": "Que riquezas são descritas dentro da caverna? Seleciona TODAS as corretas.",
+    "options": [
+      "Peças de seda fina",
+      "Esmeraldas",
+      "Diamantes",
+      "Televisões"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explain": "O texto descreve seda fina, esmeraldas e diamantes; não menciona televisões.",
+    "hint": "Pensa nos objetos e materiais de valor referidos na descrição da caverna."
+  },
+  {
+    "id": 29,
+    "sec": 3,
+    "kind": "single",
+    "question": "Quantos sacos de moedas Ali Babá resolveu encher?",
+    "options": [
+      "Um",
+      "Dois",
+      "Três",
+      "Quarenta"
+    ],
+    "correct": 1,
+    "explain": "Ali Babá encontrou dois sacos vazios e decidiu enchê-los com moedas.",
+    "hint": "Recorda o plano feito depois de observar os tesouros."
+  },
+  {
+    "id": 30,
+    "sec": 3,
+    "kind": "writing",
+    "question": "Explica em duas ou três frases a relação entre o título «Abre-te, sésamo!» e os acontecimentos do texto.",
+    "model": "«Abre-te, sésamo!» é a fórmula mágica que desloca a rocha e dá acesso à caverna. Ao ouvi-la, Ali Babá descobre como entrar no local onde estão escondidos os tesouros.",
+    "rubric": "Indica a função da expressão e a sua importância para a ação.",
+    "hint": "O título destaca o segredo que faz avançar a história."
+  },
+  {
+    "id": 31,
+    "sec": 4,
+    "kind": "single",
+    "question": "Na frase «Os outros irmãos ficaram contentes», a palavra «outros» é…",
+    "options": [
+      "Pronome indefinido",
+      "Determinante indefinido",
+      "Advérbio",
+      "Verbo"
+    ],
+    "correct": 1,
+    "explain": "«Outros» acompanha o nome «irmãos», por isso é determinante indefinido.",
+    "hint": "Verifica se a palavra aparece antes de um nome."
+  },
+  {
+    "id": 32,
+    "sec": 4,
+    "kind": "single",
+    "question": "Em «Todos mostraram as suas obras-primas», a palavra «Todos» é…",
+    "options": [
+      "Determinante indefinido",
+      "Nome comum",
+      "Pronome indefinido",
+      "Adjetivo numeral"
+    ],
+    "correct": 2,
+    "explain": "«Todos» substitui um grupo de pessoas e não acompanha um nome; é pronome indefinido.",
+    "hint": "Observa se a palavra substitui ou acompanha um nome."
+  },
+  {
+    "id": 33,
+    "sec": 4,
+    "kind": "single",
+    "question": "Em «Nenhum falhou a sua tarefa», «Nenhum» pertence à classe…",
+    "options": [
+      "Pronome indefinido",
+      "Determinante indefinido",
+      "Preposição",
+      "Conjunção"
+    ],
+    "correct": 0,
+    "explain": "«Nenhum» substitui um nome subentendido e funciona como pronome indefinido.",
+    "hint": "Qual é a função da palavra sem nome expresso a seguir?"
+  },
+  {
+    "id": 34,
+    "sec": 4,
+    "kind": "single",
+    "question": "Na expressão «Certo momento», a palavra «Certo» é…",
+    "options": [
+      "Pronome pessoal",
+      "Pronome indefinido",
+      "Determinante indefinido",
+      "Verbo"
+    ],
+    "correct": 2,
+    "explain": "«Certo» antecede e determina o nome «momento».",
+    "hint": "Analisa a palavra que vem imediatamente depois."
+  },
+  {
+    "id": 35,
+    "sec": 4,
+    "kind": "fill",
+    "question": "Completa com um determinante indefinido: «______ dia, um homem decidiu que os filhos aprenderiam um ofício.»",
+    "accepted": [
+      "certo"
+    ],
+    "explain": "«Certo dia» é uma expressão com determinante indefinido antes do nome.",
+    "hint": "É a mesma estrutura usada no início de muitos contos tradicionais."
+  },
+  {
+    "id": 36,
+    "sec": 4,
+    "kind": "fill",
+    "question": "Completa com um pronome indefinido: «Um filho tornou-se ferreiro; ______ tornou-se barbeiro.»",
+    "accepted": [
+      "outro"
+    ],
+    "explain": "«Outro» substitui «outro filho» e evita repetir o nome.",
+    "hint": "A palavra deve substituir um nome já mencionado."
+  },
+  {
+    "id": 37,
+    "sec": 4,
+    "kind": "single",
+    "question": "Na frase «Numa certa manhã, o príncipe saiu», qual é a classificação de «certa»?",
+    "options": [
+      "Determinante indefinido",
+      "Pronome indefinido",
+      "Pronome relativo",
+      "Conjunção"
+    ],
+    "correct": 0,
+    "explain": "«Certa» acompanha o nome «manhã», concordando com ele no feminino singular.",
+    "hint": "Identifica a palavra à qual «certa» se refere."
+  },
+  {
+    "id": 38,
+    "sec": 4,
+    "kind": "multi",
+    "question": "Assinala TODAS as frases em que a palavra destacada funciona como pronome indefinido.",
+    "options": [
+      "«Todos» regressaram ao castelo.",
+      "Os «outros» rapazes chegaram.",
+      "«Ninguém» respondeu.",
+      "«Certo» rapaz sorriu."
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explain": "«Todos» e «Ninguém» substituem nomes; «outros» e «Certo» acompanham nomes.",
+    "hint": "Um pronome ocupa o lugar do nome; um determinante acompanha-o."
+  },
+  {
+    "id": 39,
+    "sec": 4,
+    "kind": "match",
+    "question": "Classifica as palavras entre aspas como determinante ou pronome indefinido.",
+    "pairs": [
+      [
+        "«Outro» irmão entrou.",
+        "Determinante indefinido"
+      ],
+      [
+        "«Outro» entrou.",
+        "Pronome indefinido"
+      ],
+      [
+        "«Alguns» ladrões saíram.",
+        "Determinante indefinido"
+      ],
+      [
+        "«Alguns» saíram.",
+        "Pronome indefinido"
+      ]
+    ],
+    "choices": [
+      "Determinante indefinido",
+      "Pronome indefinido"
+    ],
+    "explain": "A classificação depende de a palavra acompanhar um nome ou substituí-lo.",
+    "hint": "Compara cada par de frases: há ou não um nome imediatamente associado?"
+  },
+  {
+    "id": 40,
+    "sec": 4,
+    "kind": "writing",
+    "question": "Escreve DUAS frases tuas: a primeira com um determinante indefinido e a segunda com um pronome indefinido. Identifica as palavras usadas.",
+    "model": "1. Certo rapaz entrou na gruta. (determinante: certo)\n2. Ninguém o viu chegar. (pronome: ninguém)",
+    "rubric": "Duas frases corretas, uma com indefinido a acompanhar um nome e outra com indefinido a substituí-lo.",
+    "hint": "Podes usar certo, outro, alguns, todos, ninguém ou nenhum, desde que respeites a função."
+  },
+  {
+    "id": 41,
+    "sec": 5,
+    "kind": "single",
+    "question": "Na frase «Quiseram que se acumulasse aquela riqueza», «acumulasse» está no…",
+    "options": [
+      "Presente do conjuntivo",
+      "Pretérito imperfeito do conjuntivo",
+      "Futuro do conjuntivo",
+      "Pretérito perfeito do indicativo"
+    ],
+    "correct": 1,
+    "explain": "«Acumulasse» é pretérito imperfeito do conjuntivo.",
+    "hint": "Observa a terminação verbal e o valor de hipótese no passado."
+  },
+  {
+    "id": 42,
+    "sec": 5,
+    "kind": "single",
+    "question": "Em «Sempre que se pronuncie a fórmula mágica, a rocha abre», «pronuncie» está no…",
+    "options": [
+      "Futuro do conjuntivo",
+      "Pretérito imperfeito do conjuntivo",
+      "Presente do conjuntivo",
+      "Presente do indicativo"
+    ],
+    "correct": 2,
+    "explain": "«Pronuncie» é uma forma do presente do conjuntivo.",
+    "hint": "Compara a forma com o quadro dos tempos do conjuntivo."
+  },
+  {
+    "id": 43,
+    "sec": 5,
+    "kind": "single",
+    "question": "Na frase «Quando Ali Babá chegar a casa, a mulher ficará perplexa», «chegar» está no…",
+    "options": [
+      "Presente do conjuntivo",
+      "Futuro do conjuntivo",
+      "Pretérito imperfeito do conjuntivo",
+      "Infinitivo pessoal"
+    ],
+    "correct": 1,
+    "explain": "«Chegar» depois de «quando», numa situação futura, é futuro do conjuntivo.",
+    "hint": "A ação ainda não aconteceu e existe uma referência temporal."
+  },
+  {
+    "id": 44,
+    "sec": 5,
+    "kind": "fill",
+    "question": "Completa no pretérito imperfeito do conjuntivo: «Ali Babá receava que os ladrões o ______ (descobrir).»",
+    "accepted": [
+      "descobrissem"
+    ],
+    "explain": "O sujeito é «os ladrões» (eles); a forma é «descobrissem».",
+    "hint": "A forma verbal deve concordar com «os ladrões»."
+  },
+  {
+    "id": 45,
+    "sec": 5,
+    "kind": "fill",
+    "question": "Completa no futuro do conjuntivo: «Quando os ladrões ______ (partir), Ali poderá descer.»",
+    "accepted": [
+      "partirem"
+    ],
+    "explain": "Para «eles» no futuro do conjuntivo de «partir», usa-se «partirem».",
+    "hint": "A frase começa com «quando» e refere-se a uma ação futura."
+  },
+  {
+    "id": 46,
+    "sec": 5,
+    "kind": "fill",
+    "question": "Completa no presente do conjuntivo: «Desejamos que a personagem não ______ (ser) descoberta.»",
+    "accepted": [
+      "seja"
+    ],
+    "explain": "Depois de «desejamos que», o presente do conjuntivo de «ser», 3.ª pessoa do singular, é «seja».",
+    "hint": "O verbo «ser» é irregular."
+  },
+  {
+    "id": 47,
+    "sec": 5,
+    "kind": "fill",
+    "question": "Completa no presente do conjuntivo: «O texto faz com que nós ______ (entrar) num mundo à parte.»",
+    "accepted": [
+      "entremos"
+    ],
+    "explain": "A forma de «entrar» na 1.ª pessoa do plural do presente do conjuntivo é «entremos».",
+    "hint": "Presta atenção à pessoa «nós»."
+  },
+  {
+    "id": 48,
+    "sec": 5,
+    "kind": "match",
+    "question": "Associa cada expressão ao tempo do modo conjuntivo.",
+    "pairs": [
+      [
+        "«Que nós voltemos»",
+        "Presente"
+      ],
+      [
+        "«Se nós voltássemos»",
+        "Pretérito imperfeito"
+      ],
+      [
+        "«Quando nós voltarmos»",
+        "Futuro"
+      ]
+    ],
+    "choices": [
+      "Presente",
+      "Pretérito imperfeito",
+      "Futuro"
+    ],
+    "explain": "«Voltemos» é presente, «voltássemos» é pretérito imperfeito e «voltarmos» é futuro do conjuntivo.",
+    "hint": "Identifica as terminações e as expressões «que», «se» e «quando»."
+  },
+  {
+    "id": 49,
+    "sec": 5,
+    "kind": "single",
+    "question": "Escolhe a forma correta: «Se eu ______ mais cedo, veria a rocha abrir-se.»",
+    "options": [
+      "volto",
+      "voltasse",
+      "voltar",
+      "voltarei"
+    ],
+    "correct": 1,
+    "explain": "«Se eu voltasse» combina com «veria» para exprimir uma situação hipotética.",
+    "hint": "A consequência está no condicional: «veria»."
+  },
+  {
+    "id": 50,
+    "sec": 5,
+    "kind": "writing",
+    "question": "Reescreve a frase começando por «Desejo que…»: «As pedras preciosas brilham para sempre.»",
+    "model": "Desejo que as pedras preciosas brilhem para sempre.",
+    "rubric": "Inclui «Desejo que» e transforma «brilham» em «brilhem» sem alterar o sentido.",
+    "hint": "O verbo precisa de passar para o presente do conjuntivo, na 3.ª pessoa do plural."
+  }
+];
+const sections={1:'Os três irmãos',2:'A rainha das abelhas',3:'Abre-te, sésamo!',4:'Determinante e pronome indefinido',5:'Modo conjuntivo'};
+const readings={
+1:[`Um pai tinha três filhos e queria que cada um aprendesse um ofício. Combinou que a casa ficaria para aquele que apresentasse a melhor obra-prima. O filho mais velho tornou-se ferreiro, o segundo barbeiro e o mais novo mestre de esgrima.`,`Quando regressaram, mostraram o que sabiam fazer. O ferreiro conseguiu colocar quatro ferraduras num cavalo a galope. O barbeiro barbeou uma lebre com grande destreza. O mestre de esgrima movimentou a sua espada de tal forma que a chuva não o molhou.`,`O pai considerou a demonstração do mais novo a melhor. Mesmo assim, os três irmãos, que gostavam muito uns dos outros, decidiram viver juntos naquela casa.`],
+2:[`Três príncipes partiram à aventura. O mais novo chamava-se Tolo, e os irmãos mais velhos julgavam-no ingénuo. Durante a viagem, os mais velhos quiseram destruir um formigueiro, apanhar patos para comer e fazer fumo junto de uma colmeia. O Tolo impediu-os sempre de magoar os animais.`,`Os irmãos chegaram a um castelo encantado. Para quebrar o feitiço, era preciso realizar três tarefas. A primeira consistia em reunir mil pérolas escondidas no musgo antes do pôr do sol. O rei das formigas e as suas companheiras ajudaram o Tolo. Na segunda, era necessário recuperar uma chave do fundo de um lago. Os patos mergulharam e encontraram-na.`,`Na terceira tarefa, o Tolo tinha de identificar a princesa mais nova entre três irmãs adormecidas e muito parecidas. Antes de adormecerem, a mais velha comera um torrão de açúcar, a segunda xarope e a mais nova mel. A rainha das abelhas pousou nos lábios da princesa que comera mel. O encantamento terminou e o Tolo casou com ela.`],
+3:[`Um dia, Ali Babá reparou numa nuvem de poeira e viu aproximar-se uma coluna de cavaleiros. Escondeu-se no alto de um cipreste e contou quarenta homens, incluindo o chefe. Os ladrões pararam junto de uma grande rocha. Um deles pronunciou «Abre-te, sésamo!», e abriu-se uma passagem secreta.`,`Ali Babá ficou escondido enquanto os homens entravam com os seus sacos. Como temia ser descoberto, a espera pareceu-lhe interminável. Só desceu depois de todos os ladrões se afastarem. Aproximou-se da rocha e repetiu a fórmula mágica. A passagem abriu-se.`,`Dentro da caverna encontrou uma quantidade extraordinária de tesouros: tecidos de seda fina, roupas bordadas a ouro, porcelanas, esmeraldas e diamantes. Pensou que aquelas riquezas pareciam irradiar luz. Encheu dois sacos com moedas e saiu, usando de novo a fórmula.`]};
+const kinds={single:'Escolhe uma opção',multi:'Seleciona todas',tf:'Verdadeiro ou falso',fill:'Completa a frase',match:'Estabelece correspondências',writing:'Resposta escrita'};
+const storageKey='pt6_desafio_50_v1';
+const blank=()=>({name:'',answers:{},manual:{},submitted:false,index:0});
+let state=blank();
+let readingOpened={};
+try{let parsed=JSON.parse(localStorage.getItem(storageKey)||'null');if(parsed&&typeof parsed==='object'&&parsed.answers&&typeof parsed.index==='number')state={...blank(),...parsed};}catch(e){}
+if(state.index<0||state.index>=50)state.index=0;
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function save(){try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(e){}}
+function answered(q){const a=state.answers[q.id];if(q.kind==='single'||q.kind==='tf'||q.kind==='fill'||q.kind==='writing')return typeof a==='string'&&a.trim().length>0;if(q.kind==='multi')return Array.isArray(a)&&a.length>0;if(q.kind==='match')return a&&typeof a==='object'&&q.pairs.every((_,i)=>a[i]);return false;}
+function answerCount(){return questions.filter(answered).length}
+function normal(s){return String(s??'').trim().toLowerCase().replace(/^[\s.!?«»"']+|[\s.!?«»"']+$/g,'').replace(/\s+/g,' ')}
+function isCorrect(q){const a=state.answers[q.id];if(!answered(q))return false;if(q.kind==='single')return Number(a)===q.correct;if(q.kind==='tf')return a===String(q.correct);if(q.kind==='fill')return q.accepted.some(v=>normal(v)===normal(a));if(q.kind==='multi')return q.correct.length===a.length&&q.correct.every(v=>a.includes(v));if(q.kind==='match')return q.pairs.every((p,i)=>a[i]===p[1]);return false;}
+function chapterNav(){const root=$('chapters');root.innerHTML=Object.entries(sections).map(([id,label])=>{let part=questions.filter(q=>q.sec===Number(id));let done=part.filter(answered).length;let active=questions[state.index].sec===Number(id);return `<button class="chapter ${active?'active':''}" type="button" data-sec="${id}"><span><span class="chapter-num">PARTE ${id}</span><span class="chapter-name">${esc(label)}</span></span><span class="chip">${done}/10</span></button>`}).join('');root.querySelectorAll('button').forEach(x=>x.addEventListener('click',()=>{if(!state.submitted){state.index=questions.findIndex(q=>q.sec===Number(x.dataset.sec));save();render();}else{let d=$('review'+x.dataset.sec);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}}}));$('progressText').textContent=`${answerCount()} de 50`;$('progressFill').style.width=`${answerCount()*2}%`;}
+function navigateTo(i){state.index=Math.max(0,Math.min(49,i));save();render();window.scrollTo({top:0,behavior:'smooth'});}
+function render(){chapterNav();$('studentName').value=state.name||'';if(state.submitted){$('quizScreen').classList.add('hidden');$('resultScreen').classList.remove('hidden');renderResults();return;}$('quizScreen').classList.remove('hidden');$('resultScreen').classList.add('hidden');const q=questions[state.index],a=state.answers[q.id];$('qcount').textContent=`Questão ${q.id} de 50 · Parte ${q.sec}`;$('qtype').textContent=kinds[q.kind];$('questionTitle').textContent=q.question;const reading=$('readingArea');if(readings[q.sec]){reading.innerHTML=`<details class="reading-panel" ${readingOpened[q.sec]?'open':''}><summary>Texto de apoio — ${esc(sections[q.sec])} (abrir/fechar)</summary><div class="reading-body"><em>Resumo didático recontado a partir do material fornecido, não é uma transcrição do manual.</em>${readings[q.sec].map(t=>`<p>${esc(t)}</p>`).join('')}</div></details>`;reading.querySelector('details').addEventListener('toggle',e=>{readingOpened[q.sec]=e.target.open;});}else reading.innerHTML='';let markup='';if(q.kind==='single'||q.kind==='tf'||q.kind==='multi'){let opts=q.kind==='tf'?['Verdadeiro','Falso']:q.options;markup=`<div class="choices" role="group" aria-label="Respostas">${opts.map((v,i)=>{let val=q.kind==='tf'?String(i===0):String(i);let selected=q.kind==='multi'?Array.isArray(a)&&a.includes(i):a===val;let type=q.kind==='multi'?'checkbox':'radio';return `<label class="choice ${selected?'selected':''}"><input type="${type}" name="opt" data-opt="${i}" ${selected?'checked':''}><span class="choice-index">${q.kind==='tf'?'':String.fromCharCode(65+i)}</span><span class="choice-text">${esc(v)}</span></label>`}).join('')}</div>`;}else if(q.kind==='fill'){markup=`<label class="sr-only" for="answerInput">Resposta</label><input id="answerInput" class="answer-input" value="${esc(a||'')}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Escreve aqui a palavra ou expressão"><div class="field-note">Escreve apenas o que falta. Atenção à ortografia e à conjugação.</div>`;}else if(q.kind==='match'){markup=`<div class="pair-list">${q.pairs.map((p,i)=>`<div class="pair"><span class="pair-text">${esc(p[0])}</span><select class="match-select" data-match="${i}" aria-label="Correspondência de ${esc(p[0])}"><option value="">Seleciona…</option>${q.choices.map(c=>`<option value="${esc(c)}" ${(a&&a[i]===c)?'selected':''}>${esc(c)}</option>`).join('')}</select></div>`).join('')}</div><div class="field-note">Escolhe uma correspondência para cada linha.</div>`;}else if(q.kind==='writing'){markup=`<label class="sr-only" for="answerTextarea">Resposta escrita</label><textarea id="answerTextarea" class="answer-textarea" placeholder="Escreve aqui a tua resposta…">${esc(a||'')}</textarea><div class="field-note">A tua resposta será guardada, mas precisa de revisão depois da correção automática.</div>`;}$('answerArea').innerHTML=markup;$('hintContent').classList.add('hidden');$('hintContent').textContent=q.hint;$('hintBtn').textContent='+ Mostrar uma dica';$('hintBtn').setAttribute('aria-expanded','false');$('previousBtn').disabled=state.index===0;$('nextBtn').classList.toggle('hidden',state.index===49);$('finishBtn').classList.toggle('hidden',state.index!==49);let part=questions.filter(x=>x.sec===q.sec);$('questionDots').innerHTML=part.map(x=>`<button class="dot ${x.id===q.id?'current':''} ${answered(x)?'answered':''}" type="button" data-q="${x.id}" title="Questão ${x.id}">${x.id}</button>`).join('');$('questionDots').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>navigateTo(Number(b.dataset.q)-1)));
+ if(q.kind==='single'||q.kind==='tf'||q.kind==='multi'){$('answerArea').querySelectorAll('input').forEach(inp=>inp.addEventListener('change',()=>{if(q.kind==='multi'){let current=Array.isArray(state.answers[q.id])?[...state.answers[q.id]]:[];let idx=Number(inp.dataset.opt);state.answers[q.id]=inp.checked?[...new Set([...current,idx])]:current.filter(v=>v!==idx);}else{state.answers[q.id]=q.kind==='tf'?String(Number(inp.dataset.opt)===0):inp.dataset.opt;}save();render();}));}
+ if(q.kind==='fill')$('answerInput').addEventListener('input',e=>{state.answers[q.id]=e.target.value;save();updateProgressOnly();});
+ if(q.kind==='writing')$('answerTextarea').addEventListener('input',e=>{state.answers[q.id]=e.target.value;save();updateProgressOnly();});
+ if(q.kind==='match')$('answerArea').querySelectorAll('select').forEach(sel=>sel.addEventListener('change',e=>{state.answers[q.id]={...(state.answers[q.id]||{}),[e.target.dataset.match]:e.target.value};save();updateProgressOnly();}));}
+function updateProgressOnly(){chapterNav();let part=questions.filter(q=>q.sec===questions[state.index].sec);document.querySelectorAll('#questionDots .dot').forEach(el=>{let q=questions[Number(el.dataset.q)-1];el.classList.toggle('answered',answered(q));});}
+function expectedText(q){if(q.kind==='single')return q.options[q.correct];if(q.kind==='tf')return q.correct?'Verdadeiro':'Falso';if(q.kind==='fill')return q.accepted.join(' / ');if(q.kind==='multi')return q.correct.map(i=>q.options[i]).join('; ');if(q.kind==='match')return q.pairs.map(p=>`${p[0]} → ${p[1]}`).join('\n');return q.model;}
+function givenText(q){const a=state.answers[q.id];if(!answered(q))return '— Sem resposta —';if(q.kind==='single')return q.options[Number(a)];if(q.kind==='tf')return a==='true'?'Verdadeiro':'Falso';if(q.kind==='multi')return a.map(i=>q.options[i]).join('; ');if(q.kind==='match')return q.pairs.map((p,i)=>`${p[0]} → ${a[i]||'—'}`).join('\n');return String(a);}
+function summaryText(){const auto=questions.filter(q=>q.kind!=='writing');let right=auto.filter(isCorrect).length;let manual=questions.filter(q=>q.kind==='writing');let reviewed=manual.filter(q=>state.manual[q.id]==='correct'||state.manual[q.id]==='incorrect');let correctManual=manual.filter(q=>state.manual[q.id]==='correct').length;return {autoRight:right,autoTotal:auto.length,manualTotal:manual.length,reviewed:reviewed.length,correctManual,total:right+correctManual};}
+function renderResults(){const summary=summaryText();let complete=summary.reviewed===summary.manualTotal;let score=complete?`${summary.total}/50`:'Pendente';$('resultScreen').innerHTML=`<div class="white"><div class="result-hero"><div class="mini-label">Ficha terminada</div><h2>O teu resultado</h2><p>${esc(state.name||'Aluno/a')}, concluíste a ficha. Confere as soluções e revê as respostas de escrita.</p></div><div class="numbers"><div class="metric"><strong>${summary.autoRight}/${summary.autoTotal}</strong><small>Respostas certas na correção automática</small></div><div class="metric"><strong>${summary.reviewed}/${summary.manualTotal}</strong><small>Respostas de escrita revistas</small></div><div class="metric"><strong>${score}</strong><small>${complete?'Pontuação total com revisão':'Total após rever a escrita'}</small></div></div><div class="notice">A correção de <strong>${summary.autoTotal} questões é automática</strong>. As outras <strong>${summary.manualTotal} são de produção escrita</strong>: compara a tua resposta com o exemplo e assinala se cumpriste os critérios. Para uma avaliação independente, pede a um adulto ou professor que as reveja. As respostas não são enviadas automaticamente a ninguém.</div><div class="result-actions"><button class="btn primary" id="downloadBtn" type="button">Descarregar as respostas (.txt)</button><button class="btn" id="printBtn" type="button">Imprimir / guardar PDF</button><button class="btn light-danger" id="resetBtn" type="button">Começar de novo</button></div><h3>Correção, questão a questão</h3>${Object.entries(sections).map(([sec,name])=>`<details class="chapter-review" id="review${sec}" ${sec==='1'?'open':''}><summary>Parte ${sec} — ${esc(name)} (${questions.filter(q=>q.sec===Number(sec)&&q.kind!=='writing'&&isCorrect(q)).length}/${questions.filter(q=>q.sec===Number(sec)&&q.kind!=='writing').length} automáticas corretas)</summary><div class="review-list">${questions.filter(q=>q.sec===Number(sec)).map(q=>{let isWrite=q.kind==='writing';let good=isCorrect(q);let tag=isWrite?'Revisão escrita':good?'Certa':'A corrigir';let css=isWrite?'manual':good?'ok':'bad';return `<div class="review-item"><div class="review-title"><span class="status ${css}">${tag}</span>${q.id}. ${esc(q.question)}</div><div class="answer-line"><strong>A tua resposta:</strong> ${esc(givenText(q))}</div><div class="answer-line"><strong>${isWrite?'Resposta-modelo:':'Solução:'}</strong> ${esc(expectedText(q))}</div><div class="explain">${esc(isWrite?q.rubric:q.explain)}</div>${isWrite?`<div class="manual-buttons" aria-label="Avaliar resposta escrita ${q.id}"><button class="${state.manual[q.id]==='correct'?'active-good':''}" data-manual="${q.id}" data-rating="correct" type="button">Cumpre os critérios (1 ponto)</button><button class="${state.manual[q.id]==='incorrect'?'active-bad':''}" data-manual="${q.id}" data-rating="incorrect" type="button">Precisa de revisão (0 pontos)</button></div>`:''}</div>`}).join('')}</div></details>`).join('')}</div>`;
+$('downloadBtn').addEventListener('click',downloadResults);$('printBtn').addEventListener('click',()=>{document.querySelectorAll('.chapter-review').forEach(d=>d.open=true);window.print()});$('resetBtn').addEventListener('click',()=>{if(confirm('Queres apagar as respostas e começar a ficha de novo?')){state=blank();save();render();window.scrollTo(0,0)}});document.querySelectorAll('[data-manual]').forEach(b=>b.addEventListener('click',()=>{state.manual[b.dataset.manual]=b.dataset.rating;save();let openSections=[...document.querySelectorAll('.chapter-review')].filter(d=>d.open).map(d=>d.id);renderResults();openSections.forEach(id=>{let d=$(id);if(d)d.open=true;});}));}
+function downloadResults(){const z=summaryText();let lines=[`DESAFIO DE PORTUGUÊS — 50 QUESTÕES`,`Nome: ${state.name||'(não indicado)'}`,`Data de exportação: ${new Date().toLocaleString('pt-PT')}`,`Correção automática: ${z.autoRight}/${z.autoTotal}`,`Respostas escritas revistas: ${z.reviewed}/${z.manualTotal}`,`Pontuação total: ${z.reviewed===z.manualTotal?z.total+'/50':'por concluir (revisão escrita pendente)'}`,'','='.repeat(55)];questions.forEach(q=>{lines.push(`\n${q.id}. ${q.question}`,`Resposta: ${givenText(q)}`,`Solução/Exemplo: ${expectedText(q)}`,`Avaliação: ${q.kind==='writing'?(state.manual[q.id]||'a rever'):(isCorrect(q)?'certa':'incorreta')}`,`Explicação: ${q.kind==='writing'?q.rubric:q.explain}`)});let blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'});let url=URL.createObjectURL(blob);let a=document.createElement('a');a.href=url;a.download=`resultado-portugues-50-${(state.name||'aluno').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-')}.txt`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000)}
+$('studentName').addEventListener('input',e=>{state.name=e.target.value;save()});$('previousBtn').addEventListener('click',()=>navigateTo(state.index-1));$('nextBtn').addEventListener('click',()=>navigateTo(state.index+1));$('hintBtn').addEventListener('click',()=>{let open=$('hintContent').classList.toggle('hidden');$('hintBtn').textContent=open?'+ Mostrar uma dica':'− Esconder a dica';$('hintBtn').setAttribute('aria-expanded',String(!open));});$('finishBtn').addEventListener('click',()=>{let missing=50-answerCount();let message=missing?`Ainda tens ${missing} questão(ões) por responder. Terminar mesmo assim?`:'Queres terminar e ver a correção? Depois, só poderás recomeçar de novo.';if(confirm(message)){state.submitted=true;save();render();window.scrollTo({top:0,behavior:'smooth'})}});
+render();
+</script>
+</body>
+</html>
